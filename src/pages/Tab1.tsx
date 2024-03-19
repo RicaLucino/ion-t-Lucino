@@ -17,6 +17,18 @@ const Tab1: React.FC = () => {
             <IonTitle size="large">Tab 1</IonTitle>
           </IonToolbar>
         </IonHeader>
+
+      
+    <IonCard>
+      <img alt="Profile of user" src="../src/assets/img/profile.avif" />
+      <IonCardHeader>
+        <IonCardTitle>Rica Lucino</IonCardTitle>
+        <IonCardSubtitle>BSIT 3rd Year</IonCardSubtitle>
+      </IonCardHeader>
+
+      <IonCardContent>Quote: SOS, In need of patience</IonCardContent>
+    </IonCard>
+  
       </IonContent>
     </IonPage>
   );
