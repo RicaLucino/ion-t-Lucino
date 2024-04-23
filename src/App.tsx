@@ -48,9 +48,10 @@ const App: React.FC = () => (
   <Redirect to="/Home" />
   </Route>
           {/* Home Router */}
-  <Route exact path="/Home">
-  <Home />
-  </Route>
+          <Route exact path="/Home" component={Home} />
+          <Route exact path="/Calculator" component={Calculator} />
+          {/*<Route exact path="/Profile" component={Profile} />
+          <Route exact path="/Clickcounter" component={Clickcounter}/> */}
    
     <Route exact path="/Calculator">
     <Calculator />
