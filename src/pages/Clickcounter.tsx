@@ -1,36 +1,61 @@
+import { 
+  //Page defailts
+  IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
+  //Ionic Card
+  IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle,
+  //Ionic buttons
+  IonButton, IonBackButton, IonButtons, IonIcon 
+} from '@ionic/react';
+//Ionicons
+import { arrowUndo,caretBack} from 'ionicons/icons';
+
 import React, { useState } from 'react';
-import { IonContent, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Clickcounter.css';
+import './clickcounter.css';
 
-const Clickcounter = () => {
-  const [count, setCount] = useState(0);
 
-  const incrementCounter = () => {
-    setCount(count + 1);
+const ClickCounter: React.FC = () => {
+  const [clickCount, setClickCount] = useState(0);
+
+  const handleClick = () => {
+    setClickCount(clickCount + 1);
   };
-
+ 
+  const handleClear = () => {
+    setClickCount(0);
+  };
+  
   return (
-    <IonContent className="ion-padding">
-      <IonGrid>
-        <IonRow>
-          <IonCol size="12" className="ion-text-center">
-            <h2>Click Counter</h2>
-          </IonCol>
-        </IonRow>
-        <IonRow>
-          <IonCol size="12" className="ion-text-center">
-            <h3>Clicks: {count}</h3>
-          </IonCol>
-        </IonRow>
-        <IonRow>
-          <IonCol size="12" className="ion-text-center">
-            <IonButton onClick={incrementCounter}>Click Me!</IonButton>
-          </IonCol>
-        </IonRow>
-      </IonGrid>
-    </IonContent>
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+           <IonButtons slot='start'>
+              <IonBackButton defaultHref='/app/home'/>
+           </IonButtons>
+          <IonTitle>Click Counter</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent fullscreen>
+        <IonHeader collapse="condense">
+          <IonToolbar>
+            <IonTitle size="large">Click Counter</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
+          <IonCard className="cc-card">
+            <IonCardHeader>
+              {/*
+              <IonCardTitle>Card Title</IonCardTitle>
+              <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+              */}
+            </IonCardHeader>
+            <p className="cc-output">{clickCount}</p>
+            <IonButton onClick={handleClick}>Click Me</IonButton>
+            <IonButton onClick={handleClear} fill="clear">Clear</IonButton>
+          </IonCard>
+
+      </IonContent>
+    </IonPage>
   );
 };
 
-export default Clickcounter;
+export default ClickCounter;
