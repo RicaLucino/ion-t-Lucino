@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { IonContent, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Tab3.css';
+import './Clickcounter.css';
 
-const Tab3 = () => {
+const Clickcounter = () => {
   const [count, setCount] = useState(0);
 
   const incrementCounter = () => {
@@ -33,4 +33,4 @@ const Tab3 = () => {
   );
 };
 
-export default Tab3;
+export default Clickcounter;
