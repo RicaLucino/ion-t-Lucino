@@ -16,6 +16,7 @@ import Calculator from './pages/Calculator';
 import Profile from './pages/Profile';
 import Clickcounter from './pages/Clickcounter';
 import Todolist from './pages/ToDoList';
+import Quotegenerator from './pages/Quotegenerator';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -40,48 +41,54 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-  <IonReactRouter>
-  <IonTabs>
-  <IonRouterOutlet>
-
+    <IonReactRouter>
+      <IonTabs>
+        <IonRouterOutlet>
+          
           {/* Application default route */}
-  <Route exact path="/">
-  <Redirect to="/Home" />
-  </Route>
-          {/* Home Router */}
-          <Route exact path="/Home" component={Home} />
-          <Route exact path="/Calculator" component={Calculator} />
-          {/*<Route exact path="/Profile" component={Profile} />
-          <Route exact path="/Clickcounter" component={Clickcounter}/> */}
-   
-    <Route exact path="/Calculator">
-    <Calculator />
-    </Route>
-    <Route exact path="/Profile">
-    <Profile />
-    </Route>
-    <Route path="/Clickcounter">
-    <Clickcounter />
-    </Route>
-    <Route exact path="/">
-    <Redirect to="/tab1" />
-    </Route>
-    </IonRouterOutlet>
+           <Route exact path="/ion-t-Lucino/">
+            <Redirect to="/ion-t-Lucino/Home" />
+          </Route>
 
-    <IonTabBar slot="bottom">
+          <Route exact path="/ion-t-Lucino/Home">
+            <Home />
+          </Route>
 
-      {/* Home Tab Button */}
-      <IonTabButton tab="Home" href="/Home">
-            <IonIcon aria-hidden="true" icon={homeOutline} />
+          <Route exact path="/ion-t-Lucino/Profile">
+            <Profile />
+          </Route>
+          <Route exact path="/ion-t-Lucino/Home/Clickcounter">
+            <Clickcounter />
+          </Route>
+          <Route path="/ion-t-Lucino/Home/Calculator">
+            <Calculator />
+          </Route>
+
+          <Route path="/ion-t-Lucino/Home/ToDoList">
+            <Todolist />
+          </Route>
+
+          <Route path="/ion-t-Lucino/Home/Quotegenerator">
+            <Quotegenerator />
+          </Route>
+
+          
+
+        </IonRouterOutlet>
+
+      {/* Tab Buttons */}
+        <IonTabBar slot="bottom">
+
+          <IonTabButton tab="Home" href="/ion-t-Lucino/Home">
+            <IonIcon aria-hidden="true" icon={home} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
-
-         
-          <IonTabButton tab="Profile" href="/Profile">
-            <IonIcon aria-hidden="true" icon={personCircleOutline} />
+       
+          <IonTabButton tab="Profile" href="/ion-t-Lucino/Profile">
+            <IonIcon aria-hidden="true" icon={personOutline} />
             <IonLabel>Profile</IonLabel>
           </IonTabButton>
-          
+      
         </IonTabBar>
 
       </IonTabs>
