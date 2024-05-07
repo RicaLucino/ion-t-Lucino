@@ -48,7 +48,7 @@ const cardData = [
     title: 'Calculator',
     icon: calculator,
     subtitle: 'Applet #2',
-    link: '/ion-t-Lucino/home/Calculator',
+    link: '/ion-t-Lucino/Home/Calculator',
     tags: {
       tag1: logoIonic,
       tag2: logoReact
@@ -58,7 +58,7 @@ const cardData = [
     title: 'To Do List',
     icon: pencil,
     subtitle: 'Applet #3',
-    link: '/ion-t-Lucino/Home/todolist',
+    link: '/ion-t-Lucino/Home/ToDoList',
     tags: {
       tag1: logoIonic,
       tag2: logoReact
