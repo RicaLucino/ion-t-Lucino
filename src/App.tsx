@@ -17,6 +17,7 @@ import Profile from './pages/Profile';
 import Clickcounter from './pages/Clickcounter';
 import Todolist from './pages/ToDoList';
 import Quotegenerator from './pages/Quotegenerator';
+import Notes from './pages/notes';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -70,6 +71,10 @@ const App: React.FC = () => (
 
           <Route path="/ion-t-Lucino/Home/Quotegenerator">
             <Quotegenerator />
+          </Route>
+
+          <Route path="/ion-t-Lucino/Home/notes">
+            <Notes />
           </Route>
 
           
