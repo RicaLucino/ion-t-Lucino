@@ -1,9 +1,12 @@
 {
-  "name": "ionic-t-Lucino",
+  "name": "ionic-t-lucino",
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "homepage": "https://RicaLucino.github.io/ion-t-lucino/",
   "scripts": {
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
