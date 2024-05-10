@@ -34,7 +34,7 @@ import './Notes.css';
 import { collection, addDoc, onSnapshot,updateDoc,doc, deleteDoc} from 'firebase/firestore';
 import { db } from './firebase';
 
-const Notes: React.FC = () => {
+const notes: React.FC = () => {
   const [notes, readNotes] = useState<{ id: string; title: string; description: string;dateAdded: string; }[]>([]);
   const [newTitle, setNewTitle] = useState<string>('');
   const [newDescription, setNewDescription] = useState<string>('');
@@ -150,9 +150,9 @@ const deleteNote = async (index: number) => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonButtons slot='start'>
-              <IonBackButton defaultHref='/app/home'/>
-           </IonButtons>
+          <IonButton slot="start" fill="clear" href='/'>
+            Back
+          </IonButton>
           <IonTitle>Notes</IonTitle>
         </IonToolbar>
       </IonHeader>
@@ -233,4 +233,4 @@ const deleteNote = async (index: number) => {
   );
 };
 
-export default Notes;
+export default notes;
